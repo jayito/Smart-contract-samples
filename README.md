@@ -39,9 +39,6 @@ Truffle is a development environment, testing framework and asset pipeline for E
 
 If you're using OS X or Windows, the best way to install Node.js is to use one of the installers from the Node.js download page.If you're     using Linux, you can use the installer, or you can check NodeSource's binary distributions to see whether or not there's a more recent version that works with your system.
 
-```
-$ sudo apt-get install nodejs 
-```
 Test: Run node -v. To check the version the of installed nodejs.
 
 * Install [npm](https://www.npmjs.com/package/npm)
