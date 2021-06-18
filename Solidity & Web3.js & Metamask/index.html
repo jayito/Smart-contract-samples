@@ -171,10 +171,22 @@
 						}
 					], '0x1Ee6690B272f2e4C6DeD3a8E36f6ed1A21C0a5b0');
 
-					Coursetro.events.instructorInfo('latest', function(event) {
+
+					// var subscription = web3.eth.subscribe('logs', function(error, result){
+					// 		if (!error)
+					// 				console.log('a', result);
+					// });
+
+					// // unsubscribes the subscription
+					// subscription.unsubscribe(function(error, success){
+					// 		if(success)
+					// 				console.log('Successfully unsubscribed!');
+					// });
+
+					Coursetro.events.instructorInfo({fromBlock: 'latest'}, function(event) {
 						console.log('event', event);
 					}).on('data', function(event){
-							console.log(event); // same results as the optional callback above
+							console.log('f', 1111); // same results as the optional callback above
 					});
 					// instructorEvent.watch(function(error, result) {
 					// 			if (result) {
@@ -188,13 +200,16 @@
 					// 			}
 					// 	});
 
+					Coursetro.methods.getInstructor(web3.eth.defaultAccount).call().then(function(result) {
+						$("#instructor").html(web3.utils.hexToAscii(result[1]) + ' ' + web3.utils.hexToAscii(result[2]) + ' (' + result[0] + ' years old)');
+					});
+
 					Coursetro.methods.countinstructors().call().then(function(result) {
 						$("#countIns").html(result+ ' Instructors');
 					});
 
 					$("#button").click(function() {
 						$("#loader").show();
-						console.log('web3.eth.defaultAccount',web3.utils.stringToHex($("#fName").val()));
 						let age = $("#age").val();
 						let fName = $("#fName").val();
 						let lName = $("#lName").val();
@@ -203,14 +218,8 @@
 							from: web3.eth.defaultAccount
 						}).then(function(result) {
 							// $("#countIns").html(result+ ' Instructors');
-							console.log('result', result);
+							$("#loader").hide();
 						});
-
-							// Coursetro.setInstructor(web3.eth.defaultAccount, $("#age").val(), $("#fName").val(), $("#lName").val(), (err, res) => {
-							// 		if (err) {
-							// 				$("#loader").hide();
-							// 		}
-							// });
 					});
 				});
     </script>
