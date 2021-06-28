@@ -1,6 +1,4 @@
-# Certified Soldity Developer - Course Resources
-
-This code base is a part of the code templates of different modules in the e-learning course [Learn Solidity: Programing Language for Ethereum Smart Contracts](https://www.toshacademy.com/courses/best-solidity-programing-language-tutorial-for-ethereum-smart-contracts?utm_source=github&utm_medium=voting-ballot-repo) hosted at [Tosh Academy](https://www.toshacademy.com/collections/blockchain?utm_source=github&utm_medium=voting-ballot-repo). 
+# Smart Contract Samples
 
 Learn to build smart contracts using Solidity.
 
@@ -60,11 +58,11 @@ Test: Run npm -v. To check the version the of installed npm.
 
 * Clone the repository on your local machine.
 ```
-$ git clone https://github.com/blockchain-council/build-decentralized-democracy-dao-in-ethereum-solidity.git
+$ git clone https://github.com/mathiasechi/Smart-contract-samples.git
 ```
 * "cd" into the cloned repository from command line.
 ```
-$ cd learn-solidity
+$ cd file name
 ```
 * Then run the below command which lets the dependencies from package.json gets installed locally for this particular project. The major requirements are truffle, testrpc, babel-register and babel-polyfill.
 ```
@@ -74,34 +72,14 @@ $ npm install
 * Then run the below command to start compling the contract:
 
 ```
-$ truffle compile
+$ truffle develop
+$ > complie
+$ > migrate
 ```
 
 You can also run truffle migrate and truffle test to compile your contracts, deploy those contracts to the network, and run their associated unit tests.
 
 Be sure you're connected to an ethereum client before running these commands. If you're new, install testrpc to run a local blockchain RPC server. After that, simply run testrpc in a new tab.
-
-## Authors
-
-[**Toshendra Sharma**](https://www.udemy.com/user/toshendrasharma2/)
-
-Toshendra Sharma is the founder & CEO of [RecordsKeeper](https://recordskeeper.co), a Blockchain-based record keeping solution for businesses & also the founder of [Toshblocks](https://www.toshblocks.com), A Blockchain Consulting & Development. Toshendra also founded [Blockchain Council](https://www.blockchain-council.org) to bring elite Blockchain experts together on a single platform.
-
-Earlier, he founded Appvigil (Wegilant) in Nov 2011 while pursuing my Masters in Application Security from IIT Bombay, India. Appvigil is the Mobile App Vulnerability Scanner on Cloud. He was heading the team as CEO. The company has won many awards & accolades under his leadership.
-
-Toshendra has worked on many Ethereum based projects for many companies & individuals for their coins & Initial Coin Offering (ICO).
-
-He is a well-known instructor & speaker in Blockchain space and taught more than 12,000 students worldwide spread in 148+ countries. He is also the part of Forbes India 30Under30 List of 2016 in Technology space.
-
-You can find him on: 
-* [Facebook](https://www.facebook.com/toshendra11)
-* [LinkedIn](https://linkedin.com/in/toshendra)
-* [Twitter](https://www.twitter.com/toshendrasharma)
-* [Tosh Academy](https://www.toshacademy.com)
-* [Toshblocks](https://www.toshblocks.com/)
-* [Udemy](https://www.udemy.com/user/toshendrasharma2/)
-* [Podacasts](http://www.buzzsprout.com/134645)
-
 
 License
 -------------
